@@ -160,3 +160,47 @@ namespace HeiswayiNrird.SimpleLogger
     }
 }
 ```
+
+### Usage example
+
+To get started, just initialize the SimpleLogger class. Initializing the constructor without parameter will create a fresh new log file or overwrite the file if already exists by default. **Log file will be created in the same folder with the application assembly and the log filename will follow the executing assembly name.** For example, let say the application filename is `SimpleLoggerDemo.exe`, so the log filename would be `SimpleLoggerDemo.log`.
+
+```csharp
+using HeiswayiNrird.SimpleLogger;
+
+namespace SimpleLoggerDemo
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            // Instantiate the class
+            var logger = new SimpleLogger(); // Will create a fresh new log file
+
+            // To log Trace message
+            logger.Trace("--> Trace in message here...");
+
+            // To log Info message
+            logger.Info("Anything to info here...");
+
+            // To log Debug message
+            logger.Debug("Something to debug...");
+
+            // To log Warning message
+            logger.Warning("Anything to put as a warning log...");
+
+            // To log Error message
+            logger.Error("Error message...");
+
+            // To log Fatal error message
+            logger.Fatal("Fatal error message...");
+        }
+    }
+}
+```
+
+```csharp
+var logger = new SimpleLogger(true); // Will not overwrite the existing log file
+```
+
+Initializing the constructor with parameter like above will not overwrite or clear the existing log file. Next log message added will be appended to the existing log file. Unless if the log file is not exist, then it will create a fresh new one. This is useful when I instantiate this class in different class within the same project, my log messages continue to append to my single log file without overwriting the log file.
