@@ -15,6 +15,10 @@ Unless otherwise stated, all original code presented on this site is licensed un
 ## Changelogs
 
 ```
+Version 3.2
+===========
+- Add Disqus comment feature.
+
 Version 3.1
 ===========
 - Added post tags at the bottom of post layout and tag collection page (tagged.html).

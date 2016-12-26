@@ -9,6 +9,9 @@ baseurl: null # Apply null if repo name is something like username.github.io
 # Site analytics
 google_analytics: UA-58296043-7
 
+# Disqus
+disqus_shortname: hnbloggithub
+
 # Site author info
 author:
   name: "Heiswayi Nrird"

@@ -4,6 +4,7 @@ title: Developing WPF application using MVVM design pattern
 description: Basic tutorial on how you can start developing WPF application using Model-View-ViewModel design pattern.
 keywords: wpf application, mvvm design pattern, password hashing tool
 tags: [MVVM, WPF, CSharp]
+comments: true
 ---
 
 ![Password Hashing Tool](http://i.imgur.com/EQgW18i.png)
@@ -66,7 +67,7 @@ Solution 'SimpleOneWayHashing' (1 project)
     └── ClassDiagram1.cd
 ```
 
->**Note:** I used Visual Studio 2013 to develop the "Password Hashing Tool" project but the solution and project files are named as `SimpleOneWayHashing`.
+>**Note:** I used Visual Studio 2013 to develop the "Password Hashing Tool" project and the solution and project files are named as `SimpleOneWayHashing`.
 
 As can be seen in the Tree View above, there are primary folders called **Models**, **ViewModels**, and **Views**. This is how we basically separate between the GUI and the logics. There are a lot of online resources for MVVM, each with their own way of implementing it. As the development grows, we will have more folders. This is to ensure our project is organized properly and clean.
 
@@ -490,7 +491,7 @@ You also can start developing your own MVVM application with some [MVVM framewor
 
 -----
 
-**References:**
+References:
 
 * [Simple MVVM Pattern in WPF](http://www.c-sharpcorner.com/UploadFile/raj1979/simple-mvvm-pattern-in-wpf/)
 * [MVVM in WPF](http://www.c-sharpcorner.com/uploadfile/nipuntomar/mvvm-in-wpf/)

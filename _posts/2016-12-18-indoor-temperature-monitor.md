@@ -4,6 +4,7 @@ title: Indoor Temperature Monitor
 description: Simple Arduino based project for monitoring and logging indoor temperature of my house. The application is built in .NET C# with live graph using OxyPlot.
 keywords: c# programming, serial port, serial communication, indoor temperature monitor, arduino uno, ds18b20 temperature sensor, oxyplot graph
 tags: [CSharp, SerialPort, Oxyplot, Arduino]
+comments: true
 ---
 
 Indoor Temperature Monitor is basically a simple Arduino based project for monitoring and logging indoor temperature of my house. Since I have old, unused Arduino Uno board, so I bought [1-wire digital temperature sensor (DS18B20)](https://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) and make use of my Arduino board for this simple project.

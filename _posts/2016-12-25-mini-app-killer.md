@@ -1,12 +1,13 @@
 ---
 layout: post
 title: Mini App Killer
-description: A mini lightweight program created in .NET C# that will sit in your system tray for easy access to simply kill or end task any running application.
+description: A mini lightweight application created in .NET C# that will sit in your system tray for easy access to simply kill or end task any running application.
 keywords: c# programming, mini app killer, end task process, system tray, notify icon
 tags: [CSharp, WPF]
+comments: true
 ---
 
-Mini App Killer is a mini lightweight program I created in .NET C# that will sit in your system tray for easy access to simply kill or end task any running application. Other than terminating the running application, you also can open the running application directory (Open file location) or show application File Properties.
+Mini App Killer is a mini lightweight application I created in .NET C# that will sit in your system tray for easy access to simply kill or end task any running application. Other than terminating the running application, you also can open the running application directory (Open file location) or show application File Properties.
 
 [**Download MiniAppKillerV1.zip**](https://www.dropbox.com/s/4gibswk7iz7gg9d/MiniAppKillerV1.zip?dl=0) · 55.2 KB
 

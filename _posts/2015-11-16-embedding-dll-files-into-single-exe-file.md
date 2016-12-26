@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Embedding .DLL files into a single .EXE file
-description: Some tricks to create a single binary .EXE file with embedded .DLL files using C# WinForms.
+description: Some tricks to create a single binary .EXE file with embedded external .DLL files using C# WinForms.
 keywords: embedded dll, visual studio
 tags: [WinForms, CSharp]
+comments: true
 ---
 
 This method is unusual and rarely people do it, but it still works for me when I want to hide one or two external library binaries like .DLL files into my single .EXE application file. I used to build most of my Windows application in .NET C# by using Visual Studio.
@@ -63,4 +64,4 @@ The above code requires `using System.Reflection;` namespace.
 
 That's it! When we build/compile our application, on the output folder (e.g. `bin`), we should have our single .EXE application file without any external assembly (.DLL) file.
 
-**Warning:** Please note that, embedding .DLL files into our main application .EXE file will result the our main application file size become bigger as it sum up all file size of each .DLL file.
+**Warning:** Please note that, embedding .DLL files into our main application .EXE file will result the our main application file size become bigger as it sum up all file size of each external .DLL file.

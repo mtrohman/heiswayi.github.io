@@ -1,18 +1,17 @@
 ---
 layout: post
 title: PHP - Using native password hashing API
-description: As of PHP 5.5, password hashing in PHP app made easy as 4 new native functions have been introduced.
+description: As of PHP version 5.5, password hashing in PHP app made easy as 4 new native functions (built-in) have been introduced.
 keywords: php 5.5, password hashing, native api, php functions
 tags: [PHP, Hashing]
+comments: true
 ---
 
 ## Introduction
 
-Password hashing is one of the most basic security considerations that must be made when designing any application that accepts passwords from users. Without hashing, any passwords that are stored in your application database can be stolen if the database is compromised, and then immediately used to compromise not only your application, but also the accounts of your users on other services, if they do not use unique passwords.
+As a developer, password hashing is one of the most basic security considerations that must be made when designing application that required us saving user credentials, especially user password. We must avoid implementing a weak design in hashing user password as the advancement in computer equipment, these kind of weak hashing algorithms such as `md5()` and `sha1()` are easy to "bruteforce".
 
-This can be done by applying a hashing algorithm to your user passwords before storing them in your database, so you make it implausible for any attacker to determine the original password. Hashing algorithms such as MD5, SHA1 and SHA256 are designed to be very fast and efficient. However, with modern techniques and computer equipment, it has become trivial to "brute force" the output of these algorithms in order to determine the original input. This is why `md5()` and `sha1()` are not suitable for password hashing functions.
-
-Luckily, as of PHP 5.5, a **native password hashing API** was introduced to safely handle both hashing and verifying passwords in a secure manner. When hashing passwords, the two most important considerations are the computational expense, and the salt. The more computationally expensive the hashing algorithm, the longer it will take to brute force its output. So, the suggested algorithm to use when hashing passwords is Blowfish, which is also the default used by this password hashing API.
+Luckily as of PHP 5.5, a native password hashing API was introduced to safely handle both hashing and verifying password in a secure manner. When hashing password, the two most important considerations are the computational expense, and the salt. The more computationally expensive the hashing algorithm, the longer it will take to "bruteforce" its output. So, the suggested algorithm to use when hashing password is Blowfish, which is also the default hashing algorithm used by this password hashing API.
 
 ### The implementation of native password hashing API
 

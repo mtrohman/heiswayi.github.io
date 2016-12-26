@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Simple way to minify CSS on-the-fly with PHP
-description: Without using any PHP plugin/module, here's a simple trick to minify CSS code on-the-fly with PHP script.
+description: Without using any PHP plugin or module, here's a simple trick to minify CSS code on-the-fly with PHP script.
 keywords: web optimization, css compression, css minification, php script
-tags: [PHP]
+tags: [PHP, Compression]
+comments: true
 ---
 
 CSS minification or compression is one of the rules for optimizing a web page loading performance. Here's a simple trick that we can do to minify a bunch of CSS files on the fly by using PHP script.

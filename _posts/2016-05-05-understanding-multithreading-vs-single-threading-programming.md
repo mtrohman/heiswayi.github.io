@@ -1,16 +1,17 @@
 ---
 layout: post
 title: Understanding multithreading vs single threading programming
-description: Check out the sample source code of Windows Console app in C# demonstrating multithreading programming.
+description: Check out the sample source code of Windows Console application in C# demonstrating multithreading programming.
 keywords: multithreading, single threading, sample source code, demonstration, threadpool, task, backgroundworker, windows console application
 tags: [CSharp, Multithreading]
+comments: true
 ---
 
 Multithreading is a widespread programming and execution model that allows multiple threads to exist within the context of one process. They share the process's resources, but are able to execute independently while the single threading is the processing of one command at a time.
 
 The purpose of threading is to allow computer to do more than one thing at a time. In a single core computer, multithreading won't give much advantages for overall speed. But for computer with multiple processor cores (which is common nowadays), multithreading can take advantage of additional cores to perform separate instructions at the same time or by splitting the tasks between the cores.
 
-For example, check out the sample source code below written for Windows Console app in C# that will demonstrate multithreading programming vs single threading programming. You may copy-and-paste the source code into your IDE (eg. Visual Studio) to have a try.
+For example, check out the sample source code below written for Windows Console application in C# that will demonstrate multithreading programming vs single threading programming. You may copy-and-paste the source code into your IDE (eg. Visual Studio) to have a try.
 
 ```csharp
 using System;
