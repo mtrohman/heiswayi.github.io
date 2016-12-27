@@ -7,13 +7,13 @@ tags: [CSharp]
 comments: true
 ---
 
-Basically, Project NotMe is an application that will verify either the person who is using my computer is me or someone else. For example, I went for a coffee and left my computer unlocked on my desk, then someone came in and try to use my computer without my knowledge, this application will be triggered to verify if the user is me within a period of time.
+Basically, Project NotMe is an application that will verify either the person who is using my computer is me or someone else. For example, I went for a coffee and left my computer unlocked (maybe I forgot) on my desk, then someone came in and try to use my computer without my knowledge, hence this application will be triggered to verify if the user is me within a specific duration of time.
 
 ### Screenshot
 
 ![NotMe in action](http://i.imgur.com/4FZAt8H.png)
 
-Figure 1: The application in action with fullscreen mode and showing a validation countdown timer.
+Figure 1: The application will prevent user by going fullscreen and started showing a countdown timer.
 
 If the verification failed, this application will shutdown or lock my computer automatically. If the user try to close this application by pressing [Alt]+[F4] or any other method, it will either shutdown or lock my computer too based on my preferred configuration.
 
@@ -21,7 +21,7 @@ If the verification failed, this application will shutdown or lock my computer a
 
 ![NotMe Flowchart](http://i.imgur.com/fp4y8U3.png)
 
-Figure 2: NotMe application flowchart
+Figure 2: Project NotMe application flowchart
 
 ### Purpose of application service
 
@@ -29,7 +29,7 @@ The purpose of the application service is just to monitor the main application p
 
 ### Verification method
 
-This is the interesting part for this application. The verification method I use here is hardware verification. It means to prove that I am me, during verification countdown I need to insert my personal USB drive. If the device ID is matched with the one in the application configuration, it means the verification is success.
+This is the interesting part for this application. The verification method I use here is hardware ID verification. It means to prove that I am me, during the countdown timer I need to insert my personal USB drive. If the device ID is matched with the one in the configuration file, it means the verification is success.
 
 Here the C# code for monitoring the insertion or removal event of USB drive:
 
@@ -95,7 +95,7 @@ private void StartHardwareVerification()
 
 ### Executing Commands
 
-As for now, only these two commands relevant for this application; shutting down the computer in hibernate mode or lock it. For executing these commands, the method I am using now is make the application silently execute any command using Command Prompt. Currently I preferred this kind of method because it's easy for me in future I might want to add any extra fancy thing that will be easily execute using Command Prompt.
+As for now, only these two commands relevant for this application; shutting down the computer in hibernate mode or lock it. For executing these commands, the method I am using now is make the application silently execute any command using Command Prompt. Currently I preferred this kind of method because it's easy for me in future later I might want to add any extra fancy thing that will be easily executed using Command Prompt.
 
 Here the C# function to silently execute the command using Command Prompt:
 
@@ -121,6 +121,6 @@ public void ExecuteCommand(string command)
 
 ### Other technical info
 
-The startup of this application will sit in the tray system which is using `System.Windows.Forms.NotifyIcon()`. I use `.ini` file for saving the configurations as it's easy for me to manually modify the configuration directly to the `.ini` file. [The .INI file class is available on my gist.](https://gist.github.com/heiswayi/56f4707a6cf45161807989db24dc3cea) For logging, I use my own [SimpleLogger class](https://heiswayi.github.io/2016/creating-super-simple-logger-class-in-csharp). Other than that, I use [MouseKeyHook library](https://github.com/gmamaladze/globalmousekeyhook) by George Mamaladze for capturing any keyboard inputs, mouse actions and movement globally.
+The startup mode of this application will sit in the tray system which is using `System.Windows.Forms.NotifyIcon()`. I use `.ini` file for saving/updating the configurations as it's easy for me to manually modify the configuration directly to the `.ini` file. [The .INI file class is available on my gist.](https://gist.github.com/heiswayi/56f4707a6cf45161807989db24dc3cea) For logging, I use my own [SimpleLogger class](https://heiswayi.github.io/2016/creating-super-simple-logger-class-in-csharp). Other than that, I use [MouseKeyHook library](https://github.com/gmamaladze/globalmousekeyhook) by George Mamaladze for globally capture any keyboard inputs, mouse actions and movement.
 
 _Note: This article will be revised/updated again once the project is totally complete._
