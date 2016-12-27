@@ -119,8 +119,8 @@ public void ExecuteCommand(string command)
 }
 ```
 
-### Conclusion
+### Other technical info
 
-The startup of this application will sit in the tray system which is using `System.Windows.Forms.NotifyIcon()`. I use `.ini` file for saving the configurations as it's easy for me to manually modify the configuration directly to the `.ini` file. [The .INI file class is available on my gist.](https://gist.github.com/heiswayi/56f4707a6cf45161807989db24dc3cea) For logging, I use my own SimpleLogger class. Other than that, I use [MouseKeyHook library](https://github.com/gmamaladze/globalmousekeyhook) by George Mamaladze for capturing any keyboard inputs, mouse actions and movement globally.
+The startup of this application will sit in the tray system which is using `System.Windows.Forms.NotifyIcon()`. I use `.ini` file for saving the configurations as it's easy for me to manually modify the configuration directly to the `.ini` file. [The .INI file class is available on my gist.](https://gist.github.com/heiswayi/56f4707a6cf45161807989db24dc3cea) For logging, I use my own [SimpleLogger class](https://heiswayi.github.io/2016/creating-super-simple-logger-class-in-csharp). Other than that, I use [MouseKeyHook library](https://github.com/gmamaladze/globalmousekeyhook) by George Mamaladze for capturing any keyboard inputs, mouse actions and movement globally.
 
 _Note: This article will be revised/updated again once the project is totally complete._
