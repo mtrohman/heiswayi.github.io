@@ -20,23 +20,28 @@ Asynchronous PowerShell Scripter is a .NET C# WPF-version application for execut
 
 Figure 1: During application startup or adding/removing preset script will display this Loader overlay to show that the application is loading/reloading all preset script files from `presets` folder.
 
+
 ![Application GUI](http://i.imgur.com/QIiIiPb.png)
 
 Figure 2: This is how the application is looked like, the GUI.
+
 
 ![Executing PowerShell script](http://i.imgur.com/aumSwRz.png)
 
 Figure 3: Example of executing PowerShell script from selected preset script. The application can be maximized for better Output view.
 
+
 ![Selecting output lines](http://i.imgur.com/wkeT8Yo.png)
 
 Figure 4: Example of selecting output lines for exporting to a text file.
+
 
 ![Save current script as new preset script](http://i.imgur.com/cJBS41G.png)
 
 ![Define new preset script title](http://i.imgur.com/DGwi2J7.png)
 
 Figure 5 & 6: Example of saving current script as a new preset script.
+
 
 ![Importing PowerShell script file](http://i.imgur.com/D6rnHDz.png)
 
