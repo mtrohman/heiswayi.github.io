@@ -7,13 +7,13 @@ tags: [Windows, PowerShell, Vulnerability, Encryption, Decryption]
 comments: true
 ---
 
-Did you know that you can get your Windows password in a plain text, and it can be done in less than 5 minutes?
+Did you know that your Windows passwords are vulnerable and hackable in less than 5 minutes?
 
-Yep, even in Windows 10, the method is still working nicely. The method is not new at all. So, let me show how you can test with your own just by using a simple exploitation tool and PowerShell script. This is what can happen when we left our computer unlocked and anyone can disable our anti-virus software.
+Yep, even in Windows 10, the method is still working nicely. The method is not new at all. So, let me show how you can test with your own just by using a simple exploitation tool and a PowerShell script. Anyone can perform this hacking when you left your computer unlocked. I'm not really going to explain the details, but just enough I go straight to the steps. Google is on your fingertips if you are keen to explore more.
 
 ### Getting started
 
-First, you need to download/get this tool called [mimikatz](https://github.com/gentilkiwi/mimikatz/releases/latest) (get the binary package, e.g. **mimikatz_trunk.zip**) and this PowerShell script [Out-Minidump.ps1](https://raw.github.com/mattifestation/PowerSploit/master/Exfiltration/Out-Minidump.ps1) by Matthew Graeber.
+First, you need to download or get this tool called [mimikatz](https://github.com/gentilkiwi/mimikatz/releases/latest) (just get the binary package, e.g. **mimikatz_trunk.zip**) and this PowerShell script [Out-Minidump.ps1](https://raw.github.com/mattifestation/PowerSploit/master/Exfiltration/Out-Minidump.ps1) by Matthew Graeber. Let's start!
 
 ### Using PowerShell to perform memory dump
 
@@ -34,7 +34,7 @@ Copy-Item .\lsass_868.dmp 'G:\USERFILES\Desktop\PowerShell Playground'
 
 ### Using mimikatz terminal program to view the passwords
 
-As you can see, `lsass_868.dmp` is the LSASS dump we captured in PowerShell. Now, it's time we use the mimikatz terminal to load in the dump file as follows:
+As you can see, `lsass_868.dmp` is the example of LSASS dump file captured using the PowerShell script. Now, it's time we use the mimikatz terminal to load in the dump file as follows:
 
 ```
 sekurlsa::minidump "G:\USERFILES\Desktop\PowerShell Playground\lsass_868.dmp"
