@@ -1,5 +1,8 @@
 /* Print Styles */
 @media print {
+  @page {
+    margin: 1in;
+  }
   body {
     font-family: Georgia, serif;
     background: none;
@@ -7,6 +10,7 @@
   }
   .container, .footer {
     width: 100%;
+    max-width: none;
   }
   .master-nav, .nav, .footer, .footer-social-links, .back {
     display: none;
