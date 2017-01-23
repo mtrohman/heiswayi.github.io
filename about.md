@@ -5,7 +5,7 @@ description: Little information about the person behind this site.
 keywords: about page, about me
 ---
 
-Hi, I am Heiswayi Nrird, or **wayi** in short. Currently a Software Engineer at [Keysight Technologies](http://www.keysight.com), Penang, Malaysia. In my spare time, I experiment, create or build some stuffs which can be found on [GitHub](http://github.com/heiswayi), [CodePen](http://codepen.io/heiswayi/) or [JSFiddle](http://jsfiddle.net/user/heiswayi/). Other than that, [I love to capture the beauty in nature](http://heiswayi.nrird.com/). For more detailed look at my professional skills and working experiences, feel free to check out my [LinkedIn profile](https://my.linkedin.com/in/nrird) or [online HTML resume](http://heiswayi.github.io/resume).
+Hi, I am Heiswayi Nrird, or **wayi** in short. Currently a Software Engineer at [Keysight Technologies](http://www.keysight.com), Penang, Malaysia. In my spare time, I experiment, create or build some stuffs which can be found on [GitHub](http://github.com/heiswayi), [CodePen](http://codepen.io/heiswayi/) or [JSFiddle](http://jsfiddle.net/user/heiswayi/). Other than that, [I love to capture the beauty in nature](http://heiswayi.nrird.com/).
 
 For contact, you may write an email to me at **hnrird(at)gmail.com**.
 
