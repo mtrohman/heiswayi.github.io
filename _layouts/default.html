@@ -11,23 +11,11 @@ layout: compress
     <a href="#content" class="skip">Skip to content</a>
 
     <div class="wrap">
-      <div class="master-nav">
-        <div class="nav">
-            <ul class="top-menu">
-              <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-              <li><a href="/about"><i class="fa fa-info-circle"></i> About</a></li>
-              <li><a href="/resume"><i class="fa fa-file-text-o"></i> Resume</a></li>
-              <li><a href="/tagged"><i class="fa fa-hashtag"></i> Tags</a></li>
-              <!--<li><a href="/downloads"><i class="fa fa-download"></i> Downloads</a></li>-->
-              <li><a href="http://heiswayi.nrird.com"><i class="fa fa-camera-retro"></i> Photography</a></li>
-            </ul>
-        </div>
-      </div>
 
       <div class="masthead">
         <div class="container">
           <h2 class="masthead-title">
-            <a href="/" title="Home">{{ site.title }} ✨</a>
+            <a href="/" title="Home">{{ site.title }}</a>
             {% if site.author.display_bio %}
             <small>{% include bio.html %}</small>
             {% endif %}
@@ -36,6 +24,20 @@ layout: compress
           {% if site.display_social_icons %}
             {% include social_links.html %}
           {% endif %}
+
+          <div class="nav">
+              <ul class="top-menu">
+                <li><a href="/" title="Homepage"><i class="fa fa-home"></i></a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/resume">Resume</a></li>
+                {% if page.title == "Home" %}
+                <li><a href="/#Tags">Tags</a></li>
+                {% else %}
+                <li><a href="/tagged">Tags</a></li>
+                {% endif %}
+                <li><a href="http://heiswayi.nrird.com">Photography</a></li>
+              </ul>
+          </div>
 
         </div>
       </div>

@@ -1,4 +1,4 @@
-# Version 3.1
+# Version 4.0
 
 ## About this Jekyll theme
 
@@ -15,9 +15,15 @@ Unless otherwise stated, all original code presented on this site is licensed un
 ## Changelogs
 
 ```
+Version 4.0
+===========
+- Made some changes to layout design.
+- Added tag-cloud at the bottom of homepage.
+- Minimized the use of Font Awesome icons in typography.
+
 Version 3.2
 ===========
-- Add Disqus comment feature.
+- Added Disqus comment feature.
 
 Version 3.1
 ===========
