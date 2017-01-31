@@ -18,8 +18,8 @@ But to be epic, I decided to use a substitution method with my own designed keys
 
 ### Download
 
-[**Download HeiswayiNrirdCipherProgramV1.zip**](https://www.dropbox.com/s/p9lc58cgw059mka/HeiswayiNrirdCipherProgramV1.zip?dl=0) · 25.79 KB
+[**HeiswayiNrirdCipherProgramV1.zip**](https://www.dropbox.com/s/p9lc58cgw059mka/HeiswayiNrirdCipherProgramV1.zip?dl=0) · 25.79 KB
 
 Prerequisite: [.NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42642)
 
-_Note: This program is compiled without any secure obfuscation and may highly vulnerable to reverse engineering. Please don't use this program any serious business. Just in case._
+_Note: This program is compiled without any secure obfuscation and may highly vulnerable to reverse engineering._
