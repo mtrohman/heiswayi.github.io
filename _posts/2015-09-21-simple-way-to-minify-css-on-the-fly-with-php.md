@@ -11,7 +11,7 @@ CSS minification or compression is one of the rules for optimizing a web page lo
 
 Assuming I have a bunch of CSS files such as grid.css, typography.css, button.css, form.css, table.css, etc. in a directory called "..\assets\css". Then I create a PHP file in the same directory and name it as _minified.css.php_.
 
-Here is minified.css.php source code:
+Here is **minified.css.php** source code:
 
 ```php
 <?php
