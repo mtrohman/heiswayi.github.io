@@ -1,19 +1,19 @@
 ---
 layout: post
-title: PHP - Encryption, Decryption And Password Hashing
-description: Here's how you should encrypt/decrypt your data in PHP and implement secure password hashing using PHP custom function.
+title: PHP - Encryption, Decryption and Password Hashing
+description: Here how I encrypt-decrypt my data safely and implement secure password hashing in PHP using these PHP custom function.
 keywords: php encryption function, php decryption function, secure password hashing using php
-tags: [PHP, Encryption, Decryption, Hashing]
+tags: [PHP, Encryption, Decryption, Password Hashing]
 comments: true
 ---
 
-Nowadays, people are browsing the web a lot. Some of them may be doing their business at risk when they are using a web application that is weakly built in protecting its user data or confidential information. It doesn't matter how simple or complicated, small or big the application is, when it involves keeping the user data, the developer needs to take care user information well and ensure their data are safe with our application. One way to do that is by encrypting the data before we save it.
+These days, majority of people are doing their business in risky situation when they are using applications that are weakly built in protecting its user data or user confidential information. It does not matter how simple or complicated, small or big the application is, when it comes to security, the developer should be aware and do the best they can in delivering a safer product or service especially when keeping their user data.
 
-In PHP, there are many methods that we can encrypt the information. These code snippets are ones that I commonly used in my application to ensure user confidential information are not easily been disclosed.
+In the web world, one of commonly used web programming is PHP. In PHP, there are few methods available to encrypt information data in a secure manner. These code snippets are the ones that I usually use in my web application or web development to ensure user confidential information are not easily been disclosed.
 
-### Encrypting the data
+### Data encryption
 
-This is a PHP function used to encrypt the data string.
+This is a PHP function I use to encrypt any data string.
 
 ```php
 <?php
@@ -32,7 +32,7 @@ function Encrypt($password, $data)
 ?>
 ```
 
-#### Example
+**Example:**
 
 ```php
 <?php
@@ -41,9 +41,9 @@ echo Encrypt('myPass123', 'Welcome to Flippancy 25');
 ?>
 ```
 
-The special feature here is, every time I execute this function `Encrypt()`, by using the **same** password and **same** data, the encrypted string is always changed due to the use of `mt_rand()` function for the salt generation.
+The interesting feature here is, every time I execute this `Encrypt()` function, by using the **same** password and **same** data, the encrypted string is always changed as `mt_rand()` function is used for generating the salt.
 
-Here are the output examples of encrypted strings after I executed it for three times:-
+Here are the example outputs of the encrypted string after I executed it for three times:-
 
 ```
 // Output 1: U2FsdGVkX19LYv5Y5EDmFbjH8bGMDFwlid30h2x1ybibT1Dwp0vekJ0OT4tb7/j6
@@ -51,11 +51,11 @@ Here are the output examples of encrypted strings after I executed it for three 
 // Output 3: U2FsdGVkX18OQ8puUN8BBi+d6vAjEzDTZqM2WaKQD1atOykkYl9MY7NQM1DqI4Kw
 ```
 
-Hence, even the encrypted string is changed each time I executed the function for the same input data, but it still be able to be decrypted and get back the original data string. This is the uniqueness in this encryption function.
+Hence, even the encrypted string is changed each time I executed the function for the same input data, but it still be able to be decrypted and get back the original data string.
 
-### Decrypting the data
+### Data decryption
 
-To get back the original data string, we need the decryption function.
+To get back the original data string, I use this decryption function.
 
 ```php
 <?php
@@ -76,7 +76,7 @@ function Decrypt($password, $data)
 ?>
 ```
 
-#### Example
+**Example:**
 
 ```php
 <?php
@@ -87,17 +87,19 @@ echo Decrypt('myPass123', 'U2FsdGVkX18OQ8puUN8BBi+d6vAjEzDTZqM2WaKQD1atOykkYl9MY
 ?>
 ```
 
-As you can see, for each encryption and decryption, **the correct password/passcode is required** in order to get back the original data strings.
+**NOTE:** As you can see here, for each encryption and decryption requires the supplied _password_ to work as this is part of the security layers.
 
 ### Practical use of data encryption and decryption
 
-Both of these functions are useful when we want to securely encrypt user confidential information such as Social Security number, Phone number, Bank Account number, Credit Card information and whatnots where at some points of time, we need it back in plain text or the original version of the data. **However, these functions are not practical to use for user password as it is reversible and will not secure!**
+Both of these PHP functions are useful when we want to securely encrypt user confidential information such as social security number, phone number, bank account number, credit card information, etc. where at some points of time, we need it back in a plain text.
+
+For user password, you should not encrypt it using this encryption as this is reversible and totally not practical for user password. Instead, you should hash them.
 
 ### Secure password hashing using PHP custom function
 
-Despite encryption and decryption of the data, another part that plays very important role in our application development is password hashing. The best implementation in password hashing is to use **_one-way_** hashing technique. Meaning that, it is irreversible. Unlikely the encryptions, they are formulated to be able to be decrypted it back. The password is encrypted and hashed for one-time only and it is no longer can be decrypted to a plain text anymore. You may want to check [password_hash](http://php.net/manual/en/function.password-hash.php) or [crypt](http://php.net/manual/en/function.crypt.php) for PHP one-way hashing algorithms.
+Despite of data encryption and decryption, another part that plays very important role in our application development is password hashing. The best implementation in password hashing is to use **_one-way hashing technique_**. Meaning that, it is irreversible. Unlike the encryptions, they are formulated to be able to be decrypted it back. The password is encrypted and hashed for one-time only and it is no longer can be decrypted to a plain text anymore. You may want to check [password_hash](http://php.net/manual/en/function.password-hash.php) or [crypt](http://php.net/manual/en/function.crypt.php) for PHP one-way hashing algorithms.
 
-In my projects, I usually use this hashing function to hash the user password:
+However, in my projects, I am more likely to use this custom hashing function to hash the user password:
 
 ```php
 <?php
@@ -108,7 +110,7 @@ function hashPassword($password, $salt) {
 ?>
 ```
 
-#### Example
+**Example:**
 
 ```php
 <?php
@@ -117,4 +119,4 @@ echo hashPassword('myPa55w0rd', 'Flipp@ncy25');
 ?>
 ```
 
-That's it! For more details about password hashing, I recommended you to read [this article](https://crackstation.net/hashing-security.htm). It's a really good article about salted password hashing.
+That is it how I do the data encryption, data decryption and secure implementation of password hashing in PHP. If you are keen to learn more about password hashing, I recommend you to read [this article](https://crackstation.net/hashing-security.htm). It is a really good article talking about salted password hashing.
