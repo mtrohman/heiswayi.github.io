@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Jekyll theme - Thinkspace
-description: Minimalist and white clean Jekyll theme designed for engineers to write their ranting and findings.
+description: White clean, nerdy look and minimalist Jekyll theme designed for engineers to write their ranting and findings.
 keywords: jekyll theme, thinkspace, minimalist theme, designed for engineers
 tags: [Jekyll]
 comments: true
 ---
 
-**Thinkspace** is a minimalist and white clean Jekyll theme designed for engineers to write their ranting and findings. It's best for personal blog or project blog use. Made with [Sass](https://github.com/sass/sass) which automates the compression of the compiled CSS code, and cool Jekyll layout by [Anatol Broder](http://jch.penibelst.de/) for compressing the HTML output code on-the-fly. Use typeface from [Inconsolata](https://fonts.google.com/specimen/Inconsolata) by Google Fonts and [Font Awesome](http://fontawesome.io/). [Disqus](https://disqus.com/) comment supported. It's open source, anyone is free to contribute. The source code is licensed under [MIT](http://heiswayi.github.io/mit-license) license.
+Thinkspace is a white clean, nerdy look and minimalist Jekyll theme designed for engineers to write their ranting and findings. This theme is best use for personal blog type or project-based blog. Font or typeface used is [Inconsolata](https://fonts.google.com/specimen/Inconsolata) by Google Web Fonts and [Font Awesome](http://fontawesome.io/). [Disqus](https://disqus.com/) comment is supported.
 
 [**Live Demo**](http://heiswayi.github.io/thinkspace/) / [Source Code on GitHub](https://github.com/heiswayi/thinkspace)
 
