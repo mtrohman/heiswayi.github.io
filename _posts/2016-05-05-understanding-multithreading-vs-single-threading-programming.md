@@ -1,17 +1,19 @@
 ---
 layout: post
 title: Understanding multithreading vs single threading programming
-description: Check out the sample source code of Windows Console application in C# demonstrating multithreading programming.
+description: Full source code written in .NET C# demonstrating multithreading programming using Windows Console application.
 keywords: multithreading, single threading, sample source code, demonstration, threadpool, task, backgroundworker, windows console application
-tags: [CSharp, Multithreading]
+tags: [CSharp, Multithreading, Console Application]
 comments: true
 ---
 
-Multithreading is a widespread programming and execution model that allows multiple threads to exist within the context of one process. They share the process's resources, but are able to execute independently while the single threading is the processing of one command at a time.
 
-The purpose of threading is to allow computer to do more than one thing at a time. In a single core computer, multithreading won't give much advantages for overall speed. But for computer with multiple processor cores (which is common nowadays), multithreading can take advantage of additional cores to perform separate instructions at the same time or by splitting the tasks between the cores.
 
-For example, check out the sample source code below written for Windows Console application in C# that will demonstrate multithreading programming vs single threading programming. You may copy-and-paste the source code into your IDE (eg. Visual Studio) to have a try.
+Multithreading is a widespread programming and execution model that allows multiple threads to exist within the context of one process. They share the process's resources, but they are able to execute independently while the single threading is the processing of one command at a time.
+
+The purpose of threading is to allow computer to do more than one thing at a time. In a single core computer, multithreading won't give much advantages for overall speed. But for computer with multiple processor cores (which is so common these days), multithreading can take advantage of additional cores to perform separate instructions at the same time or by splitting the tasks between the cores.
+
+Below is full source of Windows Console application written in C# that will demonstrate multithreading programming vs single threading programming. You may copy and paste the source code into your Visual Studio to have a try. The demonstration covers four multithreading options; `Thread()`, `ThreadPool.QueueUserWorkItem()`, `Task()` and `BackgroundWorker()`.
 
 ```csharp
 using System;
@@ -22,12 +24,11 @@ using System.Threading.Tasks;
 
 namespace MultithreadingVsSingleThreading
 {
-    class Program
+    internal class Program
     {
         #region Fields
 
-        static int selectedMode;
-        static bool usingSingleThread;
+        private static int selectedMode;
 
         // The number of threads to be spawned.
         private const int threadCount = 1000;
@@ -35,15 +36,14 @@ namespace MultithreadingVsSingleThreading
         // The total number of spins the actual work is carried out repeatedly.
         private const int totalCount = 100000;
 
-        #endregion
+        #endregion Fields
 
         #region Methods
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.Title = "Multithreading vs Single Threading Example";
             start:
-            usingSingleThread = false;
             Console.WriteLine("Select which mode to run:-");
             Console.WriteLine("  (1) Multithreading");
             Console.WriteLine("  (2) Single Threading");
@@ -69,7 +69,6 @@ namespace MultithreadingVsSingleThreading
             Thread.CurrentThread.Priority = ThreadPriority.Highest;
             Stopwatch watch = new Stopwatch();
             Console.Clear();
-            Console.WriteLine("Initiating work...");
             watch.Start();
 
             try
@@ -77,7 +76,7 @@ namespace MultithreadingVsSingleThreading
                 HandleMode(selectedMode);
 
                 watch.Stop();
-                Console.WriteLine("Work done!");
+                Console.WriteLine("Work complete!");
                 Console.WriteLine("Time elapsed: {0}", watch.Elapsed);
                 Console.WriteLine(Environment.NewLine);
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -99,34 +98,6 @@ namespace MultithreadingVsSingleThreading
         }
 
         /// <summary>
-        /// Draws a graphical progress bar.
-        /// </summary>
-        /// <param name="complete"></param>
-        /// <param name="maxVal"></param>
-        /// <param name="barSize"></param>
-        /// <param name="progressCharacter"></param>
-        private static void DrawProgressBar(int complete, int maxVal, int barSize, char progressCharacter)
-        {
-            Console.CursorVisible = false;
-            int left = Console.CursorLeft;
-            decimal perc = (decimal)complete / (decimal)maxVal;
-            int chars = (int)Math.Floor(perc / ((decimal)1 / (decimal)barSize));
-            string p1 = String.Empty, p2 = String.Empty;
-
-            for (int i = 0; i < chars; i++) p1 += progressCharacter;
-            for (int i = 0; i < barSize - chars; i++) p2 += progressCharacter;
-
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write(p1);
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.Write(p2);
-
-            Console.ResetColor();
-            Console.Write(" {0}%", (perc * 100).ToString("N2"));
-            Console.CursorLeft = left;
-        }
-
-        /// <summary>
         /// Performs the task based on user defined option.
         /// </summary>
         /// <param name="mode"></param>
@@ -135,19 +106,28 @@ namespace MultithreadingVsSingleThreading
             switch (mode)
             {
                 case 1:
+                    Console.WriteLine("Using Thread() | No. of threads = {0}", threadCount);
+                    Console.WriteLine("Initialize work...");
                     RunThreadMode();
                     break;
                 case 2:
-                    usingSingleThread = true;
+                    Console.WriteLine("Using this Main() thread, directly call ComplexWork({0})", totalCount);
+                    Console.WriteLine("Initialize work...");
                     ComplexWork(totalCount);
                     break;
                 case 3:
+                    Console.WriteLine("Using ThreadPool.QueueUserWorkItem() | No. of threads = {0}", threadCount);
+                    Console.WriteLine("Initialize work...");
                     RunInThreadPool();
                     break;
                 case 4:
+                    Console.WriteLine("Using Task() | No. of threads = {0}", threadCount);
+                    Console.WriteLine("Initialize work...");
                     RunTaskMode();
                     break;
                 case 5:
+                    Console.WriteLine("Using BackgroundWorker() | No. of threads = {0}", threadCount);
+                    Console.WriteLine("Initialize work...");
                     RunInBackgroundWorker();
                     break;
                 default:
@@ -162,17 +142,13 @@ namespace MultithreadingVsSingleThreading
         /// <param name="n"></param>
         private static void ComplexWork(int n)
         {
-
             for (int j = 0; j < n; j++)
             {
                 for (int i = 1; i < 100; i++)
                 {
                     Fac(i);
                 }
-
-                if (usingSingleThread) DrawProgressBar(j, n, Console.WindowWidth, 'X');
             }
-
         }
 
         /// <summary>
@@ -192,7 +168,7 @@ namespace MultithreadingVsSingleThreading
             }
         }
 
-        #endregion
+        #endregion Work Task
 
         /// <summary>
         /// Spawns new threads based on the thread count and starts the activity.
@@ -209,7 +185,6 @@ namespace MultithreadingVsSingleThreading
                 });
                 t[i].Priority = ThreadPriority.Highest;
                 t[i].Start();
-                DrawProgressBar(i, threadCount, Console.WindowWidth, 'X');
             }
 
             // Waits for all the threads to finish.
@@ -233,11 +208,9 @@ namespace MultithreadingVsSingleThreading
                         ComplexWork(totalCount / threadCount);
                         signaler.Signal();
                     });
-                    DrawProgressBar(i, threadCount, Console.WindowWidth, 'X');
                 }
                 signaler.Wait();
             }
-
         }
 
         /// <summary>
@@ -253,7 +226,6 @@ namespace MultithreadingVsSingleThreading
                     ComplexWork(totalCount / threadCount);
                 }));
                 taskList[i].Start();
-                DrawProgressBar(i, threadCount, Console.WindowWidth, 'X');
             }
             Task.WaitAll(taskList);
         }
@@ -275,30 +247,76 @@ namespace MultithreadingVsSingleThreading
                         signaler.Signal();
                     };
                     backgroundWorkerList[i].RunWorkerAsync();
-                    DrawProgressBar(i, threadCount, Console.WindowWidth, 'X');
                 }
                 signaler.Wait();
             }
-
         }
 
-        #endregion
+        #endregion Methods
     }
 }
 ```
 
-### Screenshot
+### Screenshots
 
-![Multithreading vs Single Threading Example](http://i.imgur.com/YsFg92A.png)
+![Multithreading vs Single Threading Example #1](http://i.imgur.com/q19Eigj.png)
 
-_Figure 1 (above): A Windows Console app demonstrating multithreading vs single threading programming._
+_Figure 1 (above): Showing few options of multithreadings._
 
-### Footnotes
+![Multithreading vs Single Threading Example #2](http://i.imgur.com/3YQTqCA.png)
 
-The `Thread` class is used for creating and manipulating a [thread](http://msdn.microsoft.com/en-us/library/windows/desktop/ms684841%28v=vs.85%29.aspx) in Windows.
+_Figure 2 (above): Example of multithreading using `ThreadPool.QueueUserWorkItem()`._
 
-A `Task` represents asynchronous operation and is part of the [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717%28v=vs.110%29.aspx), a set of APIs for running tasks asynchronously and in parallel.
+### Notes
 
-The `ThreadPool` class manages a group of threads in which tasks are added to a queue and automatically started when threads are created.
+- The `Thread` class is used for creating and manipulating a [thread](http://msdn.microsoft.com/en-us/library/windows/desktop/ms684841%28v=vs.85%29.aspx) in Windows.
+- A `Task` represents asynchronous operation and is part of the [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717%28v=vs.110%29.aspx), a set of APIs for running tasks asynchronously and in parallel.
+- The `ThreadPool` class manages a group of threads in which tasks are added to a queue and automatically started when threads are created.
+- The `BackgroundWorker` class executes an operation on a separate thread.
 
-The `BackgroundWorker` class executes an operation on a separate thread.
+### Demonstration results based on my PC
+
+Please note that, while I'm running this demonstration, my PC has several stuffs that are running such as multiple Google Chrome browser tabs left opened, 2 instances of Visual Studio 2015 software, Atom editor, etc.
+
+**Computer info:**
+
+```
+Processor: Intel(R) Core(TM) i3-4130 CPU @ 3.40GHz (2 cores, 4 threads)
+RAM: 12 GB DDR3
+GPU: AMD Radeon R7 200 Series
+```
+
+**Demonstration results:**
+```
+// Multithreading
+Using Thread() | No. of threads = 1000
+Initialize work...
+Work complete!
+Time elapsed: 00:00:01.6529574
+
+// Single Threading
+Using this Main() thread, directly call ComplexWork(100000)
+Initialize work...
+Work complete!
+Time elapsed: 00:00:04.6129301
+
+// ThreadPool
+Using ThreadPool.QueueUserWorkItem() | No. of threads = 1000
+Initialize work...
+Work complete!
+Time elapsed: 00:00:01.6173233
+
+// Task
+Using Task() | No. of threads = 1000
+Initialize work...
+Work complete!
+Time elapsed: 00:00:01.6230018
+
+// BackgroundWorker
+Using BackgroundWorker() | No. of threads = 1000
+Initialize work...
+Work complete!
+Time elapsed: 00:00:01.6416939
+```
+
+Based on the results above (based on my PC), multithreading programming provides about 4x faster compared to single threading.
