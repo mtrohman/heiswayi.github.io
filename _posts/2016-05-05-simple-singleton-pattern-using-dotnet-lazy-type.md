@@ -9,7 +9,7 @@ comments: true
 
 Recently, most of Microsoft .NET based applications are using .NET 4 or higher. There are debates around saying either singleton is an anti-pattern or not and mostly said yes when it is overused. However, there are times where it is useful too. So, here is my favorite way of implementing the singleton, which is using the `System.Lazy<T>` type. All you need to do is pass a delegate to the constructor which calls the single constructor, which is done most easily with a lambda expression.
 
-Let say I have a class called `SayHello.cs` with the singleton pattern implemented:
+Let say I have a class called `SayHello` with the singleton pattern implemented:
 
 ```csharp
 using System;
