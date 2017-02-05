@@ -1,13 +1,15 @@
 ---
 layout: post
 title: C# - Simple SerialPort singleton class
-description: This is my singleton class code snippet called SerialPortManager, commonly used in my projects for receiving data via serial communication.
+description: My singleton class code snippet called SerialPortManager for handling serial data communication in some of my C# projects.
 keywords: c# programming, singleton design pattern, serial port, serial communication
 tags: [CSharp, SerialPort, Singleton]
 comments: true
 ---
 
-This is my singleton class code snippet, called as `SerialPortManager` which is basically based on [System.IO.Ports.SerialPort](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) class. I created this singleton class for my own use in simple and small C# projects for receiving data stream from a serial port, e.g. [Arduino](https://www.arduino.cc/) board. The code snippet also available on [my gist](https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d).
+In my projects, some of them involves serial data communication. So, I think there is a need for me to create a reusable class that I could always reuse whenever I develop application that use serial data communication protocol. Mostly with the projects that I'm using [Arduino](https://www.arduino.cc/) board. Here is my singleton class called `SerialPortManager` which is basically based on [System.IO.Ports.SerialPort](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) class.
+
+This full source code also available on [my gist here](https://gist.github.com/heiswayi/80eda1a6905ba4edee8bd21a45f3a22d).
 
 ### SerialPortManager.cs
 
@@ -241,9 +243,9 @@ namespace HeiswayiNrird.Singleton
 
 ### Usage examples
 
-To **retrieve the data**, just subscribe to `OnDataReceived` event.
+To retrieve the data, just subscribe to `OnDataReceived` event.
 
-Example:
+**Example:**
 
 ```csharp
 using HeiswayiNrird.Singleton;
@@ -275,9 +277,9 @@ namespace SerialPortSingleton
 }
 ```
 
-For something simpler, you may use anonymous function and update directly to UI.
+For something simpler, you may use anonymous function and marshall it to the main UI thread.
 
-Example:
+**Example:**
 
 ```csharp
 using HeiswayiNrird.Singleton;
@@ -317,9 +319,9 @@ namespace SerialPortSingleton
 }
 ```
 
-To **open/close the serial port connection**, you may just call `Open()` or `Close()` method.
+To handle opening or closing the serial port connection, you may just call `Open()` or `Close()` method.
 
-Example:
+**Example:**
 
 ```csharp
 // To open/start serial port on COM4 with 9600 bps
@@ -329,9 +331,9 @@ SerialPortManager.Instance.Open("COM4", 9600);
 SerialPortManager.Instance.Close();
 ```
 
-`SerialPortManager` also provides a public event to be subscribe for receiving any status update/response. To get the status message, just subscribe to `OnStatusChanged` event or `OnSerialPortOpened` event for getting boolean return when the serial port is opened or closed.
+`SerialPortManager` also provides a public event to be subscribe for receiving any status update/response. To get the status message, just subscribe to `OnStatusChanged` event or `OnSerialPortOpened` event for getting boolean return either the serial port is opened or closed.
 
-Example:
+**Example:**
 
 ```csharp
 using HeiswayiNrird.Singleton;
@@ -363,10 +365,10 @@ namespace SerialPortSingleton
 }
 ```
 
-### Avoiding app hang during serial port closing
+### Avoiding application hang during serial port closing
 
-Don't worry, this singleton class doesn't have the issue. Here is the design approach;
+Don't worry, this class doesn't have the issue. Here is the design approach;
 
-As you can see from the class, there is no `SerialPort.Close()` (System.IO.Ports) is used as this will cause a deadlock issue or hang your application. This is because the serial port base stream is locked while serial port events are handled.
+As you can see from the class source code, there is no `System.IO.Ports.SerialPort.Close()` is used as this will cause a deadlock issue or hang your application. This is because the serial port base stream is locked while serial port events are handled.
 
-Instead, use `ReadPort()` method to be run on a new thread and use `while` loop statement for acquiring/reading data from the serial port. When `SerialPortManager.Instance.Close()` is called, `_keepReading` will be set to FALSE which will stop UI from receiving and updating data while waiting the thread terminates.
+Instead, use `ReadPort()` method to be run on a new thread and use `while` loop statement for acquiring or reading data from the serial port. When `SerialPortManager.Instance.Close()` is called, `_keepReading` will be set to FALSE which will stop UI from receiving and updating data while waiting the thread terminates.
