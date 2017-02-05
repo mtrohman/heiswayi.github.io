@@ -1,4 +1,4 @@
-# Version 4.0
+# Version 4.1
 
 ## About this Jekyll theme
 
@@ -15,6 +15,10 @@ Unless otherwise stated, all original code presented on this site is licensed un
 ## Changelogs
 
 ```
+Version 4.1
+===========
+- Added line number to PRE CODE block.
+
 Version 4.0
 ===========
 - Made some changes to layout design.
