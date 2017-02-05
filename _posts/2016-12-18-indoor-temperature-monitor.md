@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Indoor Temperature Monitor
-description: Simple Arduino based project for monitoring and logging indoor temperature of my house. The application is built in .NET C# with live graph using OxyPlot.
+description: Simple Arduino-based project for monitoring and logging indoor temperature of my house. The application is built in .NET C# with live graph using OxyPlot.
 keywords: c# programming, serial port, serial communication, indoor temperature monitor, arduino uno, ds18b20 temperature sensor, oxyplot graph
 tags: [CSharp, SerialPort, Oxyplot, Arduino]
 comments: true
@@ -60,10 +60,10 @@ delay(1000);
 
 ### Indoor Temperature Monitor application
 
-Indoor Temperature Monitor is a simple WPF application built in .NET C#. This application uses [OxyPlot](http://www.oxyplot.org/) for the graph plotting and reads temperature value sent by Arduino board using [serial port](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) connection. The background color of current temperature will automatically change based on particular temperature range. The temperature reading will be logged into a CSV file for a particular interval of time.
+Indoor Temperature Monitor is a simple WPF application built in .NET C#. This application uses [OxyPlot](http://www.oxyplot.org/) for the graph plotting and reads temperature value sent by Arduino board using [serial port](https://msdn.microsoft.com/en-us/library/system.io.ports.serialport(v=vs.110).aspx) connection. The background color of current temperature will automatically change based on certain temperature range. The temperature reading will be logged into a CSV file for a certain time interval.
 
 ![Indoor Temperature Monitor](http://i.imgur.com/8CPtSVg.png)
 
 #### Source Code and Downloads
 
-The latest source code can be found on [my GitHub repository](http://github.com/heiswayi/IndoorTempMonitor), or you may download the latest compiled binary version from [the release page here](https://github.com/heiswayi/IndoorTempMonitor/releases).
+The latest source code can be found on [GitHub](http://github.com/heiswayi/IndoorTempMonitor) repository, or you may download the latest compiled binary version from the [release page](https://github.com/heiswayi/IndoorTempMonitor/releases).

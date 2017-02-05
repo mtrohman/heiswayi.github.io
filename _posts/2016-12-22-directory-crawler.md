@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Directory Crawler
-description: A lightweight application to crawl and list out all accessible directories within a target directory and output the result into a text file.
+description: A lightweight application to crawl and list out all accessible directories recursively within a target directory and output the results into a text file.
 keywords: c# programming, console application, directory crawler, get directories
 tags: [CSharp, Console Application]
 comments: true
 ---
 
-Directory Crawler is a lightweight console application built in .NET C# to crawl and list out all accessible directories and sub-directories within an assigned target directory, then output the result of directory list into a text file.
+Directory Crawler is a lightweight console application built in .NET C# to crawl and list out all accessible directories and subdirectories recursively within an assigned target directory, then output the results of directory list into a text file.
 
-I created this program as I need to monitor some shared directories within a network.
+I created this program as I need to monitor some shared directories within a local network.
 
 ### Screenshot
 

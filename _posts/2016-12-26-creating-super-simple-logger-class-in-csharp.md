@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating super simple logger class in C#
-description: SimpleLogger.cs is simply my super simple logger class I wrote for my own use in mini C# projects development.
+description: SimpleLogger.cs is simply my super simple logger class I wrote for my own use in mini C# project development.
 keywords: c# programming, simple logger class
 tags: [CSharp]
 comments: true
@@ -9,7 +9,7 @@ comments: true
 
 Nothing much to say here, nah I just want to share my super simple logger class that I wrote for my own use in my mini C# projects. If you like it, you may use it. It's free for commercial use. This code snippet also available on my [gist](https://gist.github.com/heiswayi/69ef5413c0f28b3a58d964447c275058).
 
-`SimpleLogger.cs`
+_SimpleLogger.cs_
 
 ```csharp
 using System;
@@ -164,7 +164,9 @@ namespace HeiswayiNrird.SimpleLogger
 
 ### Usage example
 
-To get started, just initialize the SimpleLogger class. Initializing the constructor without parameter will create a fresh new log file or overwrite the file if already exists by default. **Log file will be created in the same folder with the application assembly and the log filename will follow the executing assembly name.** For example, let say the application filename is `SimpleLoggerDemo.exe`, so the log filename would be `SimpleLoggerDemo.log`.
+To get started, just initialize the `SimpleLogger` class. Initializing the constructor without parameter will create a fresh new log file or overwrite the file if already exists by default. **Log file will be created in the same folder with the application assembly file and the log filename will follow the executing assembly name.** For example, let say the application filename is `SimpleLoggerDemo.exe`, so the log filename would be `SimpleLoggerDemo.log`.
+
+Here is the "how-to-use" example:
 
 ```csharp
 using HeiswayiNrird.SimpleLogger;
@@ -204,4 +206,4 @@ namespace SimpleLoggerDemo
 var logger = new SimpleLogger(true); // Will not overwrite the existing log file
 ```
 
-Initializing the constructor with parameter like above will not overwrite or clear the existing log file. Next log message added will be appended to the existing log file. Unless if the log file is not exist, then it will create a fresh new one. This is useful when I instantiate this class in different class within the same project, my log messages continue to append to my single log file without overwriting the log file.
+Initializing the constructor with parameter like above will not overwrite or clear the existing log file. Next log message added will be appended to the existing log file. Unless if the log file is not exist, then it will create a fresh new one. This is useful when I instantiate this class in different class within the same project, my log messages continue to append to my single log file without overwriting the existing log file.

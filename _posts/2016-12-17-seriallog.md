@@ -7,7 +7,7 @@ tags: [CSharp, SerialPort, Console Application]
 comments: true
 ---
 
-SerialLog is a simple console application I created to log any serial data received from a serial port. The only purpose is just to read incoming data from a serial communication and log the data into a log file. My intention of creating this simple program is for collecting a sample of data received from a client's PC serial port before I can proceed with a real application development that featured reading/writing data via a serial communication.
+SerialLog is a simple console application I created to log any serial data received from a serial port. The only purpose is just to read incoming data from a serial communication and log the data into a log file. My intention creating this simple program is for collecting a sample of data received from a client's PC serial port before I can proceed with a real application development that featured reading or writing data through a serial communication.
 
 ### Screenshot
 

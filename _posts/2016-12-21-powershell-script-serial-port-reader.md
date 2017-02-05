@@ -60,11 +60,11 @@ Param
 
     [Parameter(Mandatory=$false, Position=6)]
     [ValidateNotNullOrEmpty()]
-	[string]$OutputFile = "notempty",
+	  [string]$OutputFile = "notempty",
 
     [Parameter(Mandatory=$false, Position=7)]
     [ValidateNotNullOrEmpty()]
-	[int]$ReadInterval = 1000
+	  [int]$ReadInterval = 1000
 )
 
 <#
@@ -119,11 +119,11 @@ function SerialPortReader
 
         [Parameter(Mandatory=$false, Position=6)]
         [ValidateNotNullOrEmpty()]
-	    [string]$OutputFile = "notempty",
+	      [string]$OutputFile = "notempty",
 
         [Parameter(Mandatory=$false, Position=7)]
         [ValidateNotNullOrEmpty()]
-	    [int]$ReadInterval = 1000
+	      [int]$ReadInterval = 1000
     )
 
     $proceed = $false
@@ -239,7 +239,7 @@ function ExportToFile
     Param
     (
         [Parameter(Mandatory=$true, Position=0)]
-	    [string]$Filename,
+	      [string]$Filename,
 
         [Parameter(Mandatory=$true, Position=1)]
         [string]$Timestamp,
