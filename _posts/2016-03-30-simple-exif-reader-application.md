@@ -24,12 +24,8 @@ Since I have been clicking my camera shutter a lot these days, so I need a simpl
 - Preview the loaded image file with histogram analysis.
 - Export the EXIF data to a text file.
 
-### Downloads
+### Source Code and Downloads
 
-The intention of this program originally is for my photography use purpose, however I made this program available as an open source and freeware.
+The original intention of this program is as one of my photography tools, and I think I would like to share the source code and make this program available publicly so someone somewhere can also benefits from it.
 
 You may download the latest binary package (executable file) on [**release page**](https://github.com/heiswayi/ExifReader/releases) or you can fork out its **source code** from my [GitHub](https://github.com/heiswayi/ExifReader) repository.
-
-### License
-
-[MIT](http://heiswayi.github.io/mit-license)
