@@ -287,6 +287,7 @@ GPU: AMD Radeon R7 200 Series
 ```
 
 **Demonstration results:**
+
 ```
 // Multithreading
 Using Thread() | No. of threads = 1000
