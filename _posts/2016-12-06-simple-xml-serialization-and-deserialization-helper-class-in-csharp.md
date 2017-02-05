@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Simple XML serialization and deserialization helper class in C#
-description: A very simple XML helper class I created for my personal use in my C# projects to ease the data serialization and deserialization in open, readable dataset format.
+description: Just another code utility for XML data serialization and deserialization I created to easy my work in C# projects.
 keywords: c# programming, xml serialization, xml deserialization, xml helper class, readable dataset format
 tags: [CSharp, XML, Utility]
 comments: true
