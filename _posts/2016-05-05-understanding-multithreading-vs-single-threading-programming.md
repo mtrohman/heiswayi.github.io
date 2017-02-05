@@ -320,4 +320,4 @@ Work complete!
 Time elapsed: 00:00:01.6416939
 ```
 
-Based on the results above (based on my PC), multithreading programming provides about 4x faster compared to single threading.
+Based on the results above (using my PC), multithreading programming provides about 4x faster compared to single threading.
