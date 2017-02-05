@@ -1,15 +1,15 @@
 ---
 layout: post
 title: MVVM common classes in a single file
-description: MVVM.cs is a collection of Model-View-ViewModel design pattern common classes that can be implemented by any ViewModel.
+description: MVVM.cs is a collection of Model-View-ViewModel (MVVM) design pattern common classes that can be implemented by any ViewModel (VM).
 keywords: mvvm common classes, viewmodelbase, onpropertychanged, raisepropertychanged, icommand, delegatecommand, relaycommand, lambda expression
 tags: [MVVM, CSharp]
 comments: true
 ---
 
-`MVVM.cs` is a collection of Model-View-ViewModel design pattern common classes that can be implemented by any ViewModel (VM). I created this collection into a single file, so whenever I want to develop MVVM-based application (without using MVVM frameworks) in C#, I just need to reference it and inherit the `ViewModelBase` class into any of my VM classes.
+**Download the source code: [MVVM.cs](https://git.io/v1TAI)**
 
-**Get the source code:** [MVVM.cs](https://git.io/v1TAI)
+_MVVM.cs_ is a collection of Model-View-ViewModel (MVVM) design pattern common classes that can be implemented by any ViewModel (VM). I created this collection into a single file, so whenever I want to develop MVVM-based application (without using MVVM frameworks) in .NET C#, I just need to reference it and inherit the `ViewModelBase` class into any of my VM classes.
 
 ### Usage examples
 
@@ -18,7 +18,7 @@ To raise any property change, you may use these following methods:
 - `OnPropertyChanged("YourPropertyName");`
 - Lambda function: `RaisePropertyChanged(() => YourPropertyName);`
 
-Example:
+**Example:**
 
 ```csharp
 using HeiswayiNrird.MVVM.Common; // MVVM.cs
@@ -52,12 +52,12 @@ namespace MVVMExampleApp
 }
 ```
 
-For ICommand property, you may use these following classes:
+For `ICommand` property, you may use any of these following classes:
 
 - `DelegateCommand()`
 - `RelayCommand()`
 
-Example:
+**Example:**
 
 ```csharp
 using HeiswayiNrird.MVVM.Common; // MVVM.cs
