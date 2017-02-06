@@ -1,22 +1,24 @@
 ---
 layout: page
 title: About
-description: Little information about the person behind this site.
+description: Little information about the human behind this site.
 keywords: about page, about me
 ---
 
-Hi, I am Heiswayi Nrird, or **wayi** in short. Currently a Software Engineer at [Keysight Technologies](http://www.keysight.com), Penang, Malaysia. In my spare time, I experiment, create or build some stuffs which can be found on [GitHub](http://github.com/heiswayi), [CodePen](http://codepen.io/heiswayi/) or [JSFiddle](http://jsfiddle.net/user/heiswayi/). Other than that, [I love to capture the beauty in nature](http://heiswayi.nrird.com/).
+![Heiswayi Nrird](http://i.imgur.com/2evo5tT.png)
+
+I am Heiswayi Nrird -- or **wayi** in short. Currently a Software Engineer at [Keysight Technologies](http://www.keysight.com), Penang, Malaysia. In my spare time, I experiment, code and build some stuffs -- some works can be found on [GitHub](http://github.com/heiswayi), [GitHub Gist](https://gist.github.com/heiswayi), [CodePen](http://codepen.io/heiswayi/) or [JSFiddle](http://jsfiddle.net/user/heiswayi/). I also love to click with my camera -- [my landscape photography](https://heiswayi.github.io/my-photography/).
 
 For contact, you may write an email to me at **hnrird(at)gmail.com**.
 
-#### Colophon
-
-This site (blog) is a place I share my thoughts, opinions, reviews, some ideas, projects or findings. This site is built with the excellent [Jekyll](http://jekyllrb.com), a static site generator and proudly hosted on [GitHub Pages](https://pages.github.com/). The layout of this site (Jekyll theme) is designed from scratch and hand-made by me with a passion of simplicity. The typeface is powered by [Fira](https://github.com/mozilla/Fira) from Mozilla. The [source code](http://github.com/heiswayi/heiswayi.github.io) can be found on my GitHub repositories.
-
-The following links are the **dedicated site** for listing of my GitHub repositories and gists:-
+Following links are dedicated sites I created to make easy on eyes for showing a list of my GitHub Repositories and Gists:-
 
 - [heiswayi.github.repositories](http://heiswayi.github.io/my-repos/)
 - [heiswayi.github.gists](http://heiswayi.github.io/my-gists/)
+
+#### Colophon
+
+This site (blog) is a place I share my thoughts, opinions, reviews, some ideas, projects or findings. This site is built with the excellent [Jekyll](http://jekyllrb.com), a static site generator and proudly hosted on [GitHub Pages](https://pages.github.com/). The layout of this site (Jekyll theme) is designed from scratch and hand-made by me with a passion of simplicity. The typeface is powered by [Fira](https://github.com/mozilla/Fira) from Mozilla. The [source code](http://github.com/heiswayi/heiswayi.github.io) of this site is available on my GitHub (don't forget to read the license note if you want to use it).
 
 #### Site Disclaimer
 
