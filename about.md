@@ -5,7 +5,7 @@ description: Little information about the human behind this site.
 keywords: about page, about me
 ---
 
-![Heiswayi Nrird](http://i.imgur.com/2evo5tT.png)
+![Heiswayi Nrird](http://i.imgur.com/b8O4DeM.png)
 
 I am Heiswayi Nrird -- or **wayi** in short. Currently a Software Engineer at [Keysight Technologies](http://www.keysight.com), Penang, Malaysia. In my spare time, I experiment, code and build some stuffs -- some works can be found on [GitHub](http://github.com/heiswayi), [GitHub Gist](https://gist.github.com/heiswayi), [CodePen](http://codepen.io/heiswayi/) or [JSFiddle](http://jsfiddle.net/user/heiswayi/). I also love to click with my camera -- [my landscape photography](https://heiswayi.github.io/my-photography/).
 
