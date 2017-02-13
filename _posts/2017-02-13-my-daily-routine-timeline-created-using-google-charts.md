@@ -98,22 +98,10 @@ function drawChart() {
   var chart = new google.visualization.Timeline(container);
   var dataTable = new google.visualization.DataTable();
 
-  dataTable.addColumn({
-    type: 'string',
-    id: 'day'
-  });
-  dataTable.addColumn({
-    type: 'string',
-    id: 'Routine'
-  });
-  dataTable.addColumn({
-    type: 'date',
-    id: 'Start'
-  });
-  dataTable.addColumn({
-    type: 'date',
-    id: 'End'
-  });
+  dataTable.addColumn({ type: 'string', id: 'day' });
+  dataTable.addColumn({ type: 'string', id: 'Routine' });
+  dataTable.addColumn({ type: 'date', id: 'Start' });
+  dataTable.addColumn({ type: 'date', id: 'End' });
 
   dataTable.addRows([
     ['Weekday', 'Sleep', new Date(0, 0, 0, 0, 0, 0), new Date(0, 0, 0, 6, 0, 0)],
