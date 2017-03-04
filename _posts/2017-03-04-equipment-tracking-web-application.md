@@ -23,7 +23,7 @@ Technically, Etrac is built from scratch using [DataTables](https://datatables.n
 *Figure 3 (above): List of equipment with logged user. If the user has the right permission given, the user can click CRUD buttons such as "Add new record", "Batch delete..." or "Update" button.*
 
 ![Screenshot4](http://i.imgur.com/xyXCltl.png)
-*Figure 4 (above): Adding new record via Modal.*
+*Figure 4 (above): Adding new record via Modal dialog.*
 
 ![Screenshot5](http://i.imgur.com/s2Sud2z.png)
 *Figure 5 (above): When user clicks on delete button, a confirmation will pop up to double-confirm before the delete action can be performed.*
