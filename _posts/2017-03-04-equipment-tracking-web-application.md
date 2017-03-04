@@ -22,14 +22,17 @@ Technically, Etrac is built from scratch using [DataTables](https://datatables.n
 ![Screenshot3](http://i.imgur.com/Lsx4JkX.png)
 *Figure 3 (above): List of equipment with logged user. If the user has the right permission given, the user can click CRUD buttons such as "Add new record", "Batch delete..." or "Update" button.*
 
-![Screenshot4](http://i.imgur.com/s2Sud2z.png)
-*Figure 4 (above): When user clicks on delete button, a confirmation will pop up to double-confirm before the delete action can be performed.*
+![Screenshot4](http://i.imgur.com/xyXCltl.png)
+*Figure 4 (above): Adding new record via Modal.*
 
-![Screenshot5](http://i.imgur.com/ulkAEDG.png)
-*Figure 5 (above): Search or filter can be performed easily when using this DataTables jQuery plugin.*
+![Screenshot5](http://i.imgur.com/s2Sud2z.png)
+*Figure 5 (above): When user clicks on delete button, a confirmation will pop up to double-confirm before the delete action can be performed.*
 
-![Screenshot6](http://i.imgur.com/TTdjjVV.png)
-*Figure 6 (above): Super simple user profile settings page.*
+![Screenshot6](http://i.imgur.com/ulkAEDG.png)
+*Figure 6 (above): Search or filter can be performed easily when using this DataTables jQuery plugin.*
 
-![Screenshot7](http://i.imgur.com/sluB9Lk.png)
-*Figure 7 (above): List of registered users.*
+![Screenshot7](http://i.imgur.com/TTdjjVV.png)
+*Figure 7 (above): Super simple user profile settings page.*
+
+![Screenshot8](http://i.imgur.com/sluB9Lk.png)
+*Figure 8 (above): List of registered users.*
