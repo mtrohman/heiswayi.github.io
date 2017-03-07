@@ -27,7 +27,7 @@ This new site layout provides more clarity and also supports pagination if my re
 
 ### Example of code snippets
 
-By using jQuery, I query GitHub API mostly using jQuery `$.ajax` and process the response received in JSON format.
+Mostly I query the GitHub API using jQuery `$.ajax` and process the return response data received in JSON format.
 
 ```js
 var github_username = 'heiswayi';
