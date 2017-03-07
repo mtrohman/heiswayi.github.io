@@ -3,7 +3,7 @@ layout: post
 title: Creating my GitHub repo list site using GitHub API
 description: Creating dedicated site for listing GitHub repositories and gists for better clarity especially where there are a lot of repos/gists.
 keywords: gird layout, github repo list site, github gist list site, listing site, github api v3, jquery ajax, muuri plugin
-tags: [JS, AJAX, GitHub API]
+tags: [JavaScript, AJAX, GitHub API]
 comments: true
 ---
 
