@@ -48,7 +48,7 @@ title: Home
 {% if tags %}
 <div class="tag-cloud" id="Tags">
   {% for tag in tags %}
-    <a id="{{ tag | slugify }}" class="tag-anchor" href="{{ site.url }}{{ site.baseurl }}/tagged#{{ tag | slugify }}"><i class="fa fa-hashtag"></i> {{ tag }}</a>
+    <a id="{{ tag | slugify }}" class="tag-anchor" href="{{ site.url }}{{ site.baseurl }}/tagged#{{ tag | slugify }}"><i class="fa fa-tag"></i> {{ tag }}</a>
   {% endfor %}
 </div>
 {% endif %}

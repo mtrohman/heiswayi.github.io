@@ -24,7 +24,7 @@ title: Tagged
 
 <div class="posts">
   {% for tag in tags %}
-    <h2 class="year" id="{{ tag | slugify }}"><i class="fa fa-hashtag"></i> {{ tag }}</h2>
+    <h2 class="year" id="{{ tag | slugify }}"><i class="fa fa-tags"></i> {{ tag }}</h2>
 
     {% for post in site.posts %}
     {% if post.tags contains tag %}
