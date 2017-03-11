@@ -1,18 +1,16 @@
 # Version 4.2
 
-## About this Jekyll theme
+### About this repo
 
 This repo contains the source code of my site (referred to SITE_URL), which is built from scratch with [Jekyll](http://jekyllrb.com/) and generously hosted automatically on GitHub with free (Thanks, GitHub Pages!). This Jekyll theme is using [Font Awesome](https://fortawesome.github.io/Font-Awesome/) for the awesome icons and [Fira](https://github.com/mozilla/Fira) fonts by Mozilla for the awesome typeface.
 
-## Live
-
 **SITE_URL:** [http://heiswayi.github.io](http://heiswayi.github.io)
 
-## License
+### License
 
 Unless otherwise stated, all original code presented on this site is licensed under the [MIT](LICENSE.md) license. All original photographs and text on this website ([heiswayi.github.io](http://heiswayi.github.io)) are licensed under a [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license. If you have any questions about using any of this material for commercial purposes, please write me an email at hnrird(at)gmail.com.
 
-## Changelogs
+### Changelogs (for personal purpose only)
 
 ```
 Version 4.2
@@ -45,4 +43,4 @@ Version 3.0
 - Removed masonry-style project list from the homepage.
 ```
 
-Handcrafted by [Heiswayi Nrird](http://heiswayi.github.io) with love.
+© Handcrafted by [Heiswayi Nrird](http://heiswayi.github.io) with love.
