@@ -15,7 +15,8 @@ layout: compress
       <div class="masthead">
         <div class="container">
           <h2 class="masthead-title">
-            <a href="/" title="Home">{{ site.title }}</a>
+            <!-- <a href="/" title="Home" class="title">{{ site.title }}</a> -->
+            <a href="{{ site.url }}" title="{{ site.title }}" class="title">ђєเรฬคץเ.ภгเг๔(รเՇє);</a>
             {% if site.author.display_bio %}
             <small>{% include bio.html %}</small>
             {% endif %}
@@ -29,13 +30,13 @@ layout: compress
               <ul class="top-menu">
                 <li><a href="/" title="Homepage"><i class="fa fa-home"></i></a></li>
                 <li><a href="/about">About</a></li>
-                <li><a href="/resume"><i class="fa fa-external-link" aria-hidden="true"></i> Resume</a></li>
+                <li><a href="/resume">Resume</a></li>
                 {% if page.title == "Home" %}
                 <li><a href="/#Tags">Tags</a></li>
                 {% else %}
                 <li><a href="/tagged">Tags</a></li>
                 {% endif %}
-                <li><a href="http://heiswayi.nrird.com"><i class="fa fa-external-link" aria-hidden="true"></i> Photography</a></li>
+                <li><a href="http://heiswayi.nrird.com">Photography</a></li>
                 <li><a href="/reminder">Reminder</a></li>
               </ul>
           </div>

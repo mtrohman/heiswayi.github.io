@@ -5,7 +5,7 @@ description: Self reminder.
 keywords: self reminder, manifesto, tick-tock
 ---
 
-<p>Current date & time: <code id="myClock"></code></p>
+<h4><span id="myClock" style="font-family:'Fira Mono',monospace;letter-spacing:2px;color:#FF4136;text-transform:uppercase"></span></h4>
 <script>
 var myClock = document.getElementById('myClock');
 function renderTime () {

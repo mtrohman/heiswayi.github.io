@@ -1,4 +1,4 @@
-# Version 4.1
+# Version 4.2
 
 ## About this Jekyll theme
 
@@ -15,6 +15,12 @@ Unless otherwise stated, all original code presented on this site is licensed un
 ## Changelogs
 
 ```
+Version 4.2
+===========
+- Minor updates and some enhancements on tags.
+- Added round corner to tag items, top nav buttons and code block.
+- Updated site title, description and brand.
+
 Version 4.1
 ===========
 - Added line number to PRE CODE block.

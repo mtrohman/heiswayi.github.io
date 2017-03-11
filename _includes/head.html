@@ -8,11 +8,11 @@
   {% assign page_title = '' %}
   {% if page.title == "Home" %}
       {% capture page_title %}
-          {{site.title}} · {{site.description}}
+          {{site.title}}
       {% endcapture %}
   {% else %}
       {% capture page_title %}
-          {{page.title}} · {{site.title}}
+          {{page.title}} · {{site.brand}}
       {% endcapture %}
   {% endif %}
   {% capture page_title %}

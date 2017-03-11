@@ -1,10 +1,11 @@
 # SEO settings
-title: "heiswayiNrird(site);"
-description: "Just another Software guy who loves PHP, C# and a cup of hot coffee..."
-keywords: "heiswayi nrird, php developer, c# developer, csharp developer, minimalist, software engineer, freelancer"
-url: "https://heiswayi.github.io" # Site url (default: "")
+title: "Heiswayi Nrird • Just Another Software Engineer"
+description: "Just another Software Engineer who loves PHP, C# and coffee... ☕"
+keywords: "heiswayi nrird, software engineer, minimalist, php and csharp developer, freelancer, full stack engineer"
+#url: "https://heiswayi.github.io" # Site url (default: "")
 #baseurl: "" # Apply repo name if use it under gh-pages branch
 baseurl: null # Apply null if repo name is something like username.github.io
+brand: "ђєเรฬคץเ.ภгเг๔(รเՇє);"
 
 # Site analytics
 google_analytics: UA-58296043-7
