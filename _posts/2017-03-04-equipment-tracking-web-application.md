@@ -178,6 +178,10 @@ PHP (server-side):
 // Global config
 require_once 'config.php';
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Easy set variables
+ */
+
 // DB table to use
 $table = TABLE_EQUIPMENTS;
 
@@ -190,22 +194,28 @@ $primaryKey = 'id';
 // parameter names
 $columns = array(
   array( 'db' => 'id',           'dt' => 'id'),
-	array( 'db' => 'model',        'dt' => 'model' ),
-	array( 'db' => 'description',  'dt' => 'description' ),
-	array( 'db' => 'project',      'dt' => 'project' ),
-	array( 'db' => 'serial_number','dt' => 'serial_number' ),
+  array( 'db' => 'model',        'dt' => 'model' ),
+  array( 'db' => 'description',  'dt' => 'description' ),
+  array( 'db' => 'project',      'dt' => 'project' ),
+  array( 'db' => 'serial_number','dt' => 'serial_number' ),
   array( 'db' => 'owner',        'dt' => 'owner' ),
   array( 'db' => 'current_owner','dt' => 'current_owner' ),
-	array( 'db' => 'remark',       'dt' => 'remark' )
+  array( 'db' => 'remark',       'dt' => 'remark' )
 );
 
 // SQL server connection information
 $sql_details = array(
   'user' => DB_USER,
-	'pass' => DB_PASS,
-	'db'   => DB_NAME,
-	'host' => DB_HOST
+  'pass' => DB_PASS,
+  'db'   => DB_NAME,
+  'host' => DB_HOST
 );
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * If you just want to use the basic configuration for DataTables with PHP
+ * server-side, there is no need to edit below this line.
+ */
 
 require( 'ssp.class.php' );
 
