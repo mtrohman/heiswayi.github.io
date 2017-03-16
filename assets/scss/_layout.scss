@@ -221,6 +221,7 @@ h2.year i.fa {
     margin-bottom: 3rem;
     border-bottom: 1px solid #ddd;
     background-color: #f3f3f3;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
 
 .masthead-title {
@@ -429,29 +430,13 @@ blockquote p:last-child {
             -webkit-border-radius: 3px;
             -moz-border-radius: 3px;
             border-radius: 3px;
-
-            &.blue {
-                color: #09f;
-                background: #036;
-                border: 1px solid #069;
-            }
-
-            &.green {
-                color: #00B100;
-                background: #004500;
-                border: 1px solid #007e00;
-            }
-
-            &.red {
-                color: #F33D36;
-                background: #7D0000;
-                border: 1px solid #BB0000;
-            }
+            box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 
             &:hover {
                 border: 1px solid #777;
                 background: #666;
                 color: #fff;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.35);
             }
         }
     }

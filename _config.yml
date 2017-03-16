@@ -1,11 +1,11 @@
 # SEO settings
-title: "Heiswayi Nrird • Just Another Software Engineer"
-description: "Just another Software Engineer who loves PHP, C# and coffee... ☕"
+title: "Heiswayi Nrird • Software Engineer"
+description: "Heiswayi Nrird is just another Software Engineer who loves coffee ☕ more than anything else."
 keywords: "heiswayi nrird, software engineer, minimalist, php and csharp developer, freelancer, full stack engineer"
 #url: "https://heiswayi.github.io" # Site url (default: "")
 #baseurl: "" # Apply repo name if use it under gh-pages branch
 baseurl: null # Apply null if repo name is something like username.github.io
-brand: "heiswayi •_• nrird"
+brand: "heiswayi nrird •••"
 
 # Site analytics
 google_analytics: UA-58296043-7
@@ -27,7 +27,7 @@ display_social_icons: true # Edit file in /_includes/social_links.html
 github:
   username: heiswayi
 facebook:
-  profile_url: https://www.facebook.com/profile.php?id=1257583160
+  profile_url: https://www.facebook.com/heiswayi.nrird
 twitter:
   username: HeiswayiNrird
 

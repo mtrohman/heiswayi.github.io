@@ -13,7 +13,7 @@
     width: 100%;
     max-width: none;
   }
-  .master-nav, .nav, .footer, .footer-social-links, .back {
+  .master-nav, .nav, .footer-social-links, .back, #disqus {
     display: none;
   }
   .hrline {
@@ -40,12 +40,17 @@
       }
     }
   }
+  .footer {
+    border-top: 1px solid black;
+    padding-top: 10px;
+  }
   pre {
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+    max-height: none;
     code {
       white-space: pre-wrap;
       white-space: -moz-pre-wrap;
