@@ -5,7 +5,7 @@ keywords: "heiswayi nrird, software engineer, minimalist, php and csharp develop
 #url: "https://heiswayi.github.io" # Site url (default: "")
 #baseurl: "" # Apply repo name if use it under gh-pages branch
 baseurl: null # Apply null if repo name is something like username.github.io
-brand: "heiswayi nrird"
+brand: "Heiswayi Nrird"
 
 # Site analytics
 google_analytics: UA-58296043-7
