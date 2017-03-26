@@ -1,4 +1,4 @@
-# Version 4.2
+# Version 4.3
 
 ### About this repo
 
@@ -13,6 +13,11 @@ Unless otherwise stated, all original code presented on this site is licensed un
 ### Changelogs (for personal purpose only)
 
 ```
+Version 4.3
+===========
+- Removed Google Analytics code tracking.
+- Removed Disqus comment.
+
 Version 4.2
 ===========
 - Minor updates and some enhancements on tags.
