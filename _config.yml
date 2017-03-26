@@ -7,10 +7,8 @@ keywords: "heiswayi nrird, software engineer, minimalist, php and csharp develop
 baseurl: null # Apply null if repo name is something like username.github.io
 brand: "Heiswayi Nrird"
 
-# Site analytics
-google_analytics: UA-58296043-7
-
 # Disqus
+disqus_enabled: false
 disqus_shortname: hnbloggithub
 
 # Site author info

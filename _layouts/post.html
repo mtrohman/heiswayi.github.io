@@ -26,7 +26,8 @@ layout: default
 		</div>
 	{% endif %}
 
-  {% include disqus.html %}
+  {% if site.disqus_enabled %}
+    {% include disqus.html %}
+  {% endif %}
 
 </div>
-<div class="back"><a href="/"><i class="fa fa-chevron-left"></i> Back to Homepage</a></div>
