@@ -4,7 +4,7 @@ description: "Heiswayi Nrird is just another Software Engineer who loves coffee 
 keywords: "heiswayi nrird, software engineer, minimalist, php and csharp developer, freelancer, full stack engineer"
 #url: "https://heiswayi.github.io" # Site url (default: "")
 #baseurl: "" # Apply repo name if use it under gh-pages branch
-baseurl: null # Apply null if repo name is something like username.github.io
+baseurl: "/nerd" # Apply null if repo name is something like username.github.io
 brand: "Heiswayi Nrird"
 
 # Disqus
